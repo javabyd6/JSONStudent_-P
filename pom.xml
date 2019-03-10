@@ -32,7 +32,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.sda.json.Main</mainClass>
+                            <mainClass>pl.sda.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
