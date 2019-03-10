@@ -12,35 +12,27 @@ public class Main {
 
     private static ObjectMapper mapper =new ObjectMapper();
 
-    public static void readStudentList(){
+    public static void main(String[] args) {
 
         try {
             Student[] studentTab = mapper.readValue(new File("studentList.json"),Student[].class);
             List<Student> studentTabRead = Arrays.asList(studentTab);
-            System.out.println(studentTabRead);
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
 
-    public static void startingChar (String letter){
 
         try {
             Student [] studentTab = mapper.readValue(new File("studentList.json"), Student[].class);
             List<Student> studentTabRead = Arrays.asList(studentTab);
             studentTabRead.stream()
-                    .filter(x -> x.getName().startsWith(letter))
-                    .forEach(System.out::println);
+                    .filter(x -> x.getName().startsWith("A"))
+                    .forEach(x -> System.out.println(x));
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        readStudentList();
-        startingChar("A");
-
-    }
 }
+
 

@@ -11,7 +11,8 @@ import java.util.List;
 public class Main {
 
     private static ObjectMapper mapper = new ObjectMapper();
-    public static void saveStudentList(){
+
+    public static void main(String[] args){
 
         Student student1 = new Student("Jan","Andrzejewski",111);
         Student student2 = new Student("Andrzej","Kowalski",222);
@@ -32,9 +33,5 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        saveStudentList();
     }
 }
